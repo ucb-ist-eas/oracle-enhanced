@@ -13,6 +13,9 @@ begin
     # Oracle 11g client ojdbc6.jar is also compatible with Java 1.7
     # Oracle 12c client provides new ojdbc7.jar
     %w(ojdbc7.jar ojdbc6.jar)
+  elsif java_version =~ /^1.8/
+    # now ojdbc6.jar is compatible with jdk 6,7 and 8
+    %w(ojdbc6.jar)
   else
     nil
   end
